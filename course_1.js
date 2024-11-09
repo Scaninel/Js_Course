@@ -147,3 +147,56 @@ names.sort();
 console.log(names);
 names.reverse();
 console.log(names);
+
+/*
+1. Create an empty array to use as a shopping list.
+2. Add Milk, Bread, and Apples to your list.
+3. Update "Bread" with Bananas and Eggs.
+4. Remove the last item from the array and output it into the console.
+5. Sort the list alphabetically.
+6. Find and output the index value of Milk.
+7. After Bananas, add Carrots and Lettuce.
+8. Create a new list containing Juice and Pop.
+9. Combine both lists, adding the new list twice to the end of the first list.
+10. Get the last index value of Pop and output it to the console.
+11. Your final list should look like this:
+["Bananas", "Carrots", "Lettuce", "Eggs", "Milk", "Juice"
+*/
+
+let MyshoppingList = ["Milk" , "Bread", "Apples"];
+console.log(MyshoppingList);
+MyshoppingList.splice(1, 1, "Bananas", "Eggs");
+console.log(MyshoppingList);
+console.log(MyshoppingList[MyshoppingList.length - 1])
+MyshoppingList.pop();
+console.log(MyshoppingList);
+MyshoppingList.sort();
+console.log(MyshoppingList);
+console.log(MyshoppingList.indexOf("Milk"));
+MyshoppingList.splice(1, 0, "Carrots", "Lettuce");
+console.log(MyshoppingList);
+
+let MyshoppingList2 = ["Juice" , "Pop"];
+MyshoppingList = MyshoppingList.concat(MyshoppingList2,MyshoppingList2);     
+console.log(MyshoppingList);
+console.log(MyshoppingList.lastIndexOf("Pop"));
+
+/*OBJECTS*/
+
+let myCar = {brand: "Toyota",
+            Model_Year: 2023,
+            Repaired: false,
+            fuel_consump: 3.5,
+}
+
+let newItem = "color";
+myCar[newItem] = "grey"
+console.log(myCar);
+
+newItem = "forSale";
+myCar[newItem] = false;
+console.log(myCar);
+
+console.log(myCar.brand);
+console.log(myCar.Model_Year);
+console.log(myCar.forSale);
